@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import PlaceWrap from './components/PlaceWrap';
+import Place from './components/Place';
+import PlaceList from './components/PlaceList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
