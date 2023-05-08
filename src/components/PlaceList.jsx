@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PlaceWrap from "./PlaceWrap";
 import Place from "./Place";
 
@@ -34,15 +34,13 @@ const places = [
         period: "5월 1일~7일",
         cost: "₩336,106 /박",
     },
-    {
-        name: "일본",
-        view: "바다 전망",
-        period: "5월 6일~11일",
-        cost: "₩1,350,887 /박",
-    },
 ]
 
 function PlaceList(props) {
+    useEffect(() => {
+        
+    }, [])
+    
     return (
         <div style={styles.wrapper}>
             {places.map((place)=>{

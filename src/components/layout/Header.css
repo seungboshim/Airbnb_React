@@ -6,8 +6,6 @@
     right: 0;
     height: 80px;
     width: 100%;
-    padding: 0 80px;
-
     background-color: white;
     align-items: center;
     justify-content: space-between;
@@ -15,6 +13,7 @@
 
 .logo {
     height: 40px;
+    margin-left: 40px;
 }
 
 .header_center {
@@ -44,4 +43,8 @@
     border: 1px solid rgb(255,56,92);
     border-radius: 48px;
     background-color: rgb(255,56,92);
+}
+
+.header_left {
+    margin-right: 40px;
 }

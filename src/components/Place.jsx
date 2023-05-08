@@ -3,15 +3,14 @@ import PlaceWrap from "./PlaceWrap";
 
 const styles = {
     wrapper: {
-        margin: 16,
-        padding: 16,
+        margin: 8,
+        padding: 8,
     },
     imageContainer: {},
     image: {
-        width: 280,
-        height: 280,
+        width: 240,
+        height: 240,
         borderRadius: 16,
-        
     },
     contentContainer: {
         marginLeft: 8,
