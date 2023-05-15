@@ -1,4 +1,5 @@
 import './Nav.css';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 function Nav(){
     return (
@@ -34,18 +35,22 @@ function Nav(){
                             <img className='slider_menu_icon' src='https://a0.muscache.com/pictures/3726d94b-534a-42b8-bca0-a0304d912260.jpg'></img>
                             <div className='slider_menu_text'>인기 급상승</div>
                         </div>
+                        <div className='slider_menu_wrap'>
+                            <img className='slider_menu_icon' src='https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg'></img>
+                            <div className='slider_menu_text'>멋진 수영장</div>
+                        </div>
                     </div>
                     <div className='slider_right'>
                         <div className='slider_btn_wrap'>
-                            <div className='slider_btn'>
-                                +
-                            </div>
-                            <div className='slider_filter'>
+                            <button className='slider_btn'>
+                                <FaChevronRight />
+                            </button>
+                            <button className='slider_filter'>
                                 <div className='slider_filter_wrap'>
                                     <img className='slider_filter_icon' src='https://cdn-icons-png.flaticon.com/512/6488/6488674.png'></img>
                                     <span className='slider_filter_text'>필터</span>
                                 </div>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>

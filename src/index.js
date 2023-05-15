@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { Provider } from 'react-redux';
+import store from './redux/todoReducer'; // Redux store를 import합니다.
 import reportWebVitals from './reportWebVitals';
-import PlaceWrap from './components/PlaceWrap';
-import Place from './components/Place';
-import PlaceList from './components/PlaceList';
+import MyPage from './pages/MyPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Provider store={store}>
+    <MyPage />
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -11,24 +11,28 @@ const styles = {
 
 const places = [
     {
+        id: 1,
         name: "Ganggu-myeon",
         view: "바다 전망",
         period: "5월 7일~13일",
         cost: "₩270,300 /박",
     },
     {
+        id: 2,
         name: "Geoje-myeon",
         view: "바다 전망",
         period: "5월 29일 ~ 6월 3일",
         cost: "₩567,524 /박",
     },
     {
+        id: 3,
         name: "일본",
         view: "산 및 바다 전망",
         period: "6월 17일~22일",
         cost: "₩657,656 /박",
     },
     {
+        id: 4,
         name: "일본",
         view: "산 전망",
         period: "5월 1일~7일",
@@ -45,7 +49,7 @@ function PlaceList(props) {
         <div style={styles.wrapper}>
             {places.map((place)=>{
                 return (
-                    <Place name={place.name} view={place.view} 
+                    <Place key={place.id} name={place.name} view={place.view} 
                     period={place.period} cost={place.cost} />
                 );
             })}

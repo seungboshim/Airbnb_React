@@ -1,6 +1,7 @@
 .nav {
     position: fixed;
     margin-top: 80px;
+    padding-top: 20px;
     height: 80px;
     width: 100%;
     border-top: 1px solid lightgray;
@@ -58,8 +59,9 @@
     height: 26px;
     width: 26px;
     text-align: center;
-
+    background-color: white;
     justify-content: center;
+    cursor: pointer;
 }
 
 .slider_filter {
@@ -69,10 +71,12 @@
     width: 80px;
     position: relative;
     margin-left: 24px;
+    background-color: white;
+    cursor: pointer;
 }
 
 .slider_filter_wrap {
-    padding: 16px 16px;
+    padding: 8px 8px;
     display: flex;
 }
 

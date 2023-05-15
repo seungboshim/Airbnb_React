@@ -31,6 +31,8 @@
 
 .searchtext {
     padding: 12px 24px;
+    font-weight: bold;
+    color: lightgray;
 }
 
 .searchbtn {
@@ -40,9 +42,15 @@
     margin-bottom: 8px;
     width: 32px;
     height: 32px;
-    border: 1px solid rgb(255,56,92);
     border-radius: 48px;
+    border-color: rgb(255,56,92);
     background-color: rgb(255,56,92);
+}
+
+.searchbtnIcon {
+    align-items: center;
+    justify-content: space-between;
+    color: white;
 }
 
 .header_left {
