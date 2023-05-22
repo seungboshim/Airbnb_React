@@ -1,6 +1,6 @@
 import React from "react";
 import { CgProfile } from "react-icons/cg";
-import { FaChevronLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const styles = {
     wrapper: {
@@ -36,11 +36,12 @@ const styles = {
         height: 36,
         width: 36,
         marginRight: 12,
+        cursor: "pointer",
     }
 };
 
 function Login(props) {
-    const { isLoggedIn, onClickLogin, onClickLogout, onClickMyPage } = props;
+    const { isLoggedIn, onClickLogin, onClickLogout } = props;
 
     return (
         <div style={styles.wrapper}>
@@ -48,9 +49,11 @@ function Login(props) {
         
             {isLoggedIn ? (
                 <div>
-                    <button type="button" style={styles.myPage} onClick={onClickMyPage}>
-                        <CgProfile />
-                    </button>
+                    <Link to="../../pages/MyPage">
+                        <button type="button" style={styles.myPage}>
+                            <CgProfile />
+                        </button>
+                    </Link>
                     <button type="button" style={styles.isLoggedIn} onClick={onClickLogout}>로그아웃</button>
                 </div>
             ) : (

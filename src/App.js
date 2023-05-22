@@ -1,13 +1,18 @@
-import Layout from './components/layout/Layout';
-import PlaceList from './components/PlaceList';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import MyPage from './pages/MyPage';
 
 function App() {
   return (
-    <Layout>
+    <BrowserRouter>
       <div>
-        <PlaceList />
+        <Routes>
+          <Route path="/*" element={<Home />} />
+          <Route path="/pages/Mypage" element={<MyPage />} />
+        </Routes>
       </div>
-    </Layout>
+    </BrowserRouter>
   );
 }
 

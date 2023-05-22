@@ -10,7 +10,7 @@ import MyPage from './pages/MyPage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <MyPage />
+    <App />
   </Provider>
 );
 
