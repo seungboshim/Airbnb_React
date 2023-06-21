@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from "react";
 import Place from "./Place";
+import styled from "styled-components";
 
-const styles = {
-    wrapper: {
-        float: "left",
-        display: "grid",
-        gridTemplateColumns: "repeat(4, 1fr)",
-        marginTop: 20,
-    },
-    mediumWrapper: {
-        float: "left",
-        display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
-        marginTop: 20,
-    },
-    mobileWrapper: {
-        float: "left",
-        display: "grid",
-        gridTemplateColumns: "repeat(2, 1fr)",
-        marginTop: 20,
-    },
-};
+const Wrapper = styled.div`
+    float: left;
+    display: grid;
+    //grid-template-columns: repeat(auto-fill, minmax(240px, 25%));
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+`;
+const MediumWrapper = styled.div`
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+`;
+const MobileWrapper = styled.div`
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+`;
 
 const places = [
     {
@@ -121,7 +121,7 @@ const places = [
     },
 ]
 
-function PlaceList(props) {
+function PlaceList() {
     const [layout, setLayout] = useState("");
 
     useEffect(() => {
@@ -149,35 +149,56 @@ function PlaceList(props) {
     return (
         <div>
             {layout === "mobile" ? (
-                <div style={styles.mobileWrapper}>
-                    {places.map((place)=>{
+                <MobileWrapper>
+                    {places.map((place) => {
                         return (
                             <Place key={place.id} img={place.img} name={place.name} view={place.view} 
                             period={place.period} cost={place.cost} />
-                        );
-                    })}
-                </div>
+                        )
+                    })};
+                </MobileWrapper>
             ) : layout === "medium" ? (
-                <div style={styles.mediumWrapper}>
-                    {places.map((place)=>{
-                        return (
-                            <Place key={place.id} img={place.img} name={place.name} view={place.view} 
-                            period={place.period} cost={place.cost} />
-                        );
-                    })}
-                </div>
-            ) : (
-                <div style={styles.wrapper}>
-                    {places.map((place)=>{
-                        return (
-                            <Place key={place.id} img={place.img} name={place.name} view={place.view} 
-                            period={place.period} cost={place.cost} />
-                        );
-                    })}
-                </div>
+                <MediumWrapper>
+                    {places.map((place) => (
+                        <Place key={place.id} img={place.img} name={place.name} view={place.view} 
+                        period={place.period} cost={place.cost} />
+                    ))};
+                </MediumWrapper>
+            ) : ( 
+                <Wrapper>
+                    {places.map((place) => (
+                        <Place key={place.id} img={place.img} name={place.name} view={place.view} 
+                        period={place.period} cost={place.cost} />
+                    ))};
+                </Wrapper>
             )}
         </div>
     );
 }
 
 export default PlaceList;
+
+/*{layout === "mobile" ? (
+    <MobileWrapper>
+        {places.map((place) => {
+            return (
+                <Place key={place.id} img={place.img} name={place.name} view={place.view} 
+                period={place.period} cost={place.cost} />
+            )
+        })};
+    </MobileWrapper>
+) : layout === "medium" ? (
+    <MediumWrapper>
+        {places.map((place) => (
+            <Place key={place.id} img={place.img} name={place.name} view={place.view} 
+            period={place.period} cost={place.cost} />
+        ))};
+    </MediumWrapper>
+) : ( 
+    <Wrapper>
+        {places.map((place) => (
+            <Place key={place.id} img={place.img} name={place.name} view={place.view} 
+            period={place.period} cost={place.cost} />
+        ))};
+    </Wrapper>
+)}*/

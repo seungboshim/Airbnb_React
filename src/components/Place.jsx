@@ -6,7 +6,8 @@ const styles = {
         margin: 8,
         padding: 8,
     },
-    imageContainer: {},
+    imageContainer: {
+    },
     image: {
         width: 240,
         height: 240,

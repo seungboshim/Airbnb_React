@@ -1,6 +1,7 @@
 import React from "react";
 import { CgProfile } from "react-icons/cg";
 import { Link } from "react-router-dom";
+import SocialKakao from "./SocialKakao";
 
 const styles = {
     wrapper: {
@@ -57,7 +58,11 @@ function Login(props) {
                     <button type="button" style={styles.isLoggedIn} onClick={onClickLogout}>로그아웃</button>
                 </div>
             ) : (
-                <button type="button" style={styles.isLoggedOut} onClick={onClickLogin}>로그인</button>
+                <div>
+                    <Link to="../../pages/LoginRoutes">
+                        <button type="button" style={styles.isLoggedOut} onClick={onClickLogin}>로그인</button>
+                    </Link>
+                </div>
             )}
         </div>
     );
